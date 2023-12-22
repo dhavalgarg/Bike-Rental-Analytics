@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/logo_main.png" width="1600" title="CitiBike Nyc and DataBricks">
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/logo_main.png" width="1600" title="CitiBike Nyc and DataBricks">
 
  # Built an end to end machine learning pipeline that can predict the hourly demand of NY Citi-Bikes at a particular station
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ Considering the extensive volume of data involved, it was crucial to devise an o
 
 To realize this objective, distinct table structures and relationships were established for historical and real-time data. The dataset encompassed two years of trip history details, historical weather data spanning two years (with occasional gaps), and three other data sources updated every 30 minutes. Adhering to the Medallion format, the pipeline architecture stored raw data in bronze tables, while cleaned, merged, and model-relevant data found its place in silver tables. API calls were integrated to address missing weather data, with gold tables reserved for model inference and data monitoring. Ensuring immutability, the ETL pipeline was designed to prevent side effects when executed multiple times with the same input data.
 
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/ETL_Arch.png" alignment="center">
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/ETL_Arch.png">
 
 This carefully designed architecture ensured a robust and efficient data pipeline, facilitating the extraction, transformation, and loading of data for analysis and modeling purposes.
 
@@ -46,34 +46,34 @@ Exploratory data analysis (EDA) played a pivotal role in this study as it provid
 - Seasonal Variations: Seasonal variations played a crucial role in ride counts. During winter, ride counts decreased due to snowfall and unfavorable weather conditions, whereas ride counts increased during summer and fall.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/yearmonth_1.png" width="400px" height="200px"/>
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/yearmonth_2.png" width="400px" height="200px"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/yearmonth_1.png" width="400px" height="200px"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/yearmonth_2.png" width="400px" height="200px"/>
 </p>
   
 + Weekend Effect: There was a noticeable decrease in ride counts during weekends, suggesting a shift in user behavior. Factors such as visibility, cloud cover, and rain emerged as significant contributors to this trend.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/weekend-effect.png" width="500" height="200"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/weekend-effect.png" width="500" height="200"/>
 </p>
 
 + Hourly Patterns: Ride counts exhibited distinct patterns based on the hour of the day. Increased ride activity was observed during early morning and evening hours, corresponding to office commute times. This finding indicated a substantial user base consisting of daily office goers.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/hourofday-effect.png" width="500" height="200"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/hourofday-effect.png" width="500" height="200"/>
 </p>
 
 + Holiday Impact: Holidays had a notable impact on ride counts, with a decline observed during these periods. In the are plot below, significant dips in bike usage were observed on specific dates, including Thanksgiving (Nov 25, 2021), Christmas Day (Dec 25, 2021), a snowstorm (Jan 29, 2022), President's Day (Feb 21, 2022), Easter (Apr 17), and Independence Day (Jul 4). These events and holidays contributed to reduced bike activity, indicating the influence of such occasions on Citi Bikes' usage.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/holiday-effect.png" width="400px" height="200px"/>
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/monthly-effect.png" width="400px" height="200px"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/holiday-effect.png" width="400px" height="200px"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/monthly-effect.png" width="400px" height="200px"/>
 </p>
 
 + Temperature Influence: While not a dominant factor, a significant rise in temperature was found to reduce ride counts. This observation underscores the sensitivity of ridership to changes in weather conditions.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/temp-effect.png" width="500" height="200"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/temp-effect.png" width="500" height="200"/>
 </p>
 
 + Cloud/Visibility Effect: The graph clearly illustrates that snowy and rainy weather conditions resulted in a significant decrease in the number of rides, while riders continued to use the service during cloudy and clear sky conditions.
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/cloudvisibility-effect.png" width="500" height="200"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/cloudvisibility-effect.png" width="500" height="200"/>
 </p>
 
 These findings played a **critical role in informing the subsequent data modeling** process, enabling the development of models tailored to improve prediction accuracy.
@@ -94,7 +94,7 @@ To compare the performance of the staging and production models, we examined the
 
 The following image depicts the forecast that was made to understand demand at a particular station
 <p align="center">
-<img src="https://raw.githubusercontent.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/master/img/forecast_1.png" width="600" height="150"/>
+<img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/forecast_1.png" width="600" height="150"/>
 </p>
 
 **Link to Code**: [Application Monitoring File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/04%20app.py>)
