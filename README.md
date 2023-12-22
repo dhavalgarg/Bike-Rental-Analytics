@@ -38,7 +38,7 @@ To realize this objective, distinct table structures and relationships were esta
 
 This carefully designed architecture ensured a robust and efficient data pipeline, facilitating the extraction, transformation, and loading of data for analysis and modeling purposes.
 
-Link to code - 
+Link to code - [ETL](https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/final_project/01%20etl.py)
 
 ### EDA
 Exploratory data analysis (EDA) played a pivotal role in this study as it provided valuable insights into the usage patterns and operational demand of Citi Bikes. Key findings from the analysis include:
