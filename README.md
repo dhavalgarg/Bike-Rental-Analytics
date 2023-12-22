@@ -38,7 +38,7 @@ To realize this objective, distinct table structures and relationships were esta
 
 This carefully designed architecture ensured a robust and efficient data pipeline, facilitating the extraction, transformation, and loading of data for analysis and modeling purposes.
 
-Link to code - [ETL](https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/final_project/01%20etl.py)
+**Link to code** - [ETL](https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/final_project/01%20etl.py)
 
 ### EDA
 Exploratory data analysis (EDA) played a pivotal role in this study as it provided valuable insights into the usage patterns and operational demand of Citi Bikes. Key findings from the analysis include:
@@ -78,12 +78,12 @@ Exploratory data analysis (EDA) played a pivotal role in this study as it provid
 
 These findings played a **critical role in informing the subsequent data modeling** process, enabling the development of models tailored to improve prediction accuracy.
 
-**Link to Code**: [EDA File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/02%20eda.py>)
+**Link to Code**: [EDA File](https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/final_project/02%20eda.py)
 
 ### ML Model and Registry
-After performing the necessary data storage and preprocessing, the next step involved building the forecasting model. In this project, we utilized the popular FB-Prophet model, which took into account the monthly, daily, and hourly seasonality patterns identified during the exploratory data analysis (EDA). Holiday effects were also incorporated into the Prophet model. To track and manage the model artifacts, parameters, and metrics, we leveraged Databrick's MLflow Tracking. This allowed us to compare different models, select the best one, and easily reuse the chosen model. Additionally, MLflow Registry facilitated the smooth transition of the best model from staging to production, ensuring that the model could be continually used based on new incoming data. Although there was options of adding different version of our model into the ML Model Registry and use only the model giving best peformance. But FB-Prophet in this case was giving much better performance than other and therefore the our model registry contained only the prophet model version which was transitioned into stage and used thereafter.
+Following the essential steps of data storage and preprocessing, the subsequent phase entailed constructing the forecasting model. In this project, we opted for the widely recognized FB-Prophet model, incorporating insights from the exploratory data analysis (EDA) to address monthly, daily, and hourly seasonality patterns. The model also factored in holiday effects. For streamlined tracking and management of model artifacts, parameters, and metrics, Databricks' MLflow Tracking was instrumental. This feature enabled us to compare different models, identify the optimal one, and effortlessly reuse the selected model. Furthermore, the use of MLflow Registry facilitated a seamless transition from staging to production for the chosen model, ensuring its continual utilization based on incoming data. Despite the option to add various versions of our model to the ML Model Registry, the superior performance of the FB-Prophet model led to its exclusive inclusion in the registry, marking a successful transition to the production stage.
 
-**Link to Code**: [ML Model File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/03%20mdl.py>)
+**Link to Code**: [ML Model File](https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/final_project/03%20mdl.py)
 
 ### Application and Real Time Model
 In the final phase of our project, we focused on monitoring the performance of the forecasting model as new data arrived every 30 minutes. To accomplish this, we utilized the gold tables to track the live performance of the model. This allowed us to promptly take action if the model's performance fell below a predefined threshold and update the model accordingly.
@@ -97,10 +97,10 @@ The following image depicts the forecast that was made to understand demand at a
 <img src="https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/img/forecast_1.png" width="600" height="150"/>
 </p>
 
-**Link to Code**: [Application Monitoring File](<https://github.com/skswar/NYCitibike_Demand_Prediction_ML_Pipeline/blob/master/final_project/04%20app.py>)
+**Link to Code**: [Application Monitoring File](https://github.com/dhavalgarg/Prediction-of-Hourly-Bike-Usage-for-Citi-Bike-Stations-in-New-York-City/blob/master/final_project/04%20app.py)
 
 
 ## Conclusion
-This project aimed to develop an end-to-end machine learning application to assist businesses like NY Citi Bike in understanding and addressing the demand for their services, thereby improving operational efficiency. The utilization of Databricks, with its robust capabilities, proved instrumental in processing large volumes of data efficiently. Additionally, it provided a comprehensive platform for data visualization, Python/SQL coding, and deploying and monitoring multiple models all under one umbrella. Managing multiple machine learning models, finding optimal hyperparameters, and tracking model artifacts can be challenging, but Databricks simplified these tasks through the use of ML-Flow and ML-Registry. This is particularly valuable in visualizing, maintaining and improving prediction performance and automating the overall flow. Overall, this project was a valuable learning experience, highlighting the advancements in technology and their potential to drive business growth in a competitive market.
+The objective of this project was to create a holistic machine learning application to support businesses like NY Citi Bike in comprehending and managing the demand for their services, ultimately enhancing operational efficiency. Leveraging Databricks, renowned for its robust capabilities, proved pivotal in efficiently processing extensive data volumes. Moreover, it served as a comprehensive platform for data visualization, Python/SQL coding, and the deployment and monitoring of multiple models, consolidating various tasks under one umbrella. Juggling multiple machine learning models, identifying optimal hyperparameters, and monitoring model artifacts can pose challenges, but Databricks simplified these complexities with the incorporation of ML-Flow and ML-Registry. This becomes particularly beneficial for visualizing, maintaining, and enhancing prediction performance while automating the overall workflow. In summary, this project was an invaluable learning experience, showcasing the strides in technology and their potential to drive business growth in a competitive market.
 
 
